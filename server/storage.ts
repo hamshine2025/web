@@ -38,7 +38,7 @@ export class MemStorage implements IStorage {
           "Lifespan": "50,000 hours",
           "Warranty": "5 years"
         },
-        imageUrl: "https://pixabay.com/get/g69515c8db1e55c226e04966f136da8d260149465545d2ef156a9c567573c7444687fc82acbc3a9269cd0aba4ed053dbbb5d36953828a4f5a43e52ed4b109de4b_1280.jpg",
+        imageUrl: "https://images.unsplash.com/photo-1573804633927-bfcbcd909acd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=600",
         iconClass: "fas fa-road",
         tags: ["LED Technology", "Energy Efficient", "Smart Control"],
         isFeatured: 1
@@ -114,7 +114,7 @@ export class MemStorage implements IStorage {
           "Efficiency": "92%+",
           "Warranty": "3 years"
         },
-        imageUrl: "https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=300",
+        imageUrl: "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=600",
         iconClass: "fas fa-gas-pump",
         tags: ["Backup Power", "High Reliability", "Automatic"],
         isFeatured: 0
@@ -133,7 +133,7 @@ export class MemStorage implements IStorage {
           "Efficiency": "95%+",
           "Warranty": "5 years"
         },
-        imageUrl: "https://pixabay.com/get/g5faa4da10c050836f2e83dbd5f3b116efcd27ca7412407531a6178655470b71101717e5ffdda2e5d969cac2b4c8a580372001a4364979f0e4f687ef8a2fe173c_1280.jpg",
+        imageUrl: "https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=600",
         iconClass: "fas fa-battery-three-quarters",
         tags: ["Energy Storage", "IoT Enabled", "Scalable"],
         isFeatured: 0
@@ -171,7 +171,7 @@ export class MemStorage implements IStorage {
           "Safety": "Child Safe Materials",
           "Warranty": "1 year"
         },
-        imageUrl: "https://pixabay.com/get/g3685d4b13d3b4887de59f9715158fdc9544901bf0c8585b68ad69a3e85c668a062f42010606bb09c847bfadbc4d46252b240c4f641c2d2acebfc5694546cdbfe_1280.jpg",
+        imageUrl: "https://images.unsplash.com/photo-1532601224476-15c79f2f7a51?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=600",
         iconClass: "fas fa-flask",
         tags: ["Educational", "Hydrogen Power", "Safe Design"],
         isFeatured: 0
@@ -228,7 +228,7 @@ export class MemStorage implements IStorage {
           "Monitoring": "Real-time Data",
           "Warranty": "5 years"
         },
-        imageUrl: "https://pixabay.com/get/g69515c8db1e55c226e04966f136da8d260149465545d2ef156a9c567573c7444687fc82acbc3a9269cd0aba4ed053dbbb5d36953828a4f5a43e52ed4b109de4b_1280.jpg",
+        imageUrl: "https://images.unsplash.com/photo-1514317625640-6b1bf7c5b0b0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=600",
         iconClass: "fas fa-road",
         tags: ["Automatic Control", "Smart Sensors", "Remote Monitoring"],
         isFeatured: 0

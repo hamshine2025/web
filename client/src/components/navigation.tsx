@@ -35,15 +35,15 @@ export default function Navigation() {
           <div className="hidden md:flex items-center space-x-8">
             {navLinks.map((link) => (
               <Link key={link.href} href={link.href}>
-                <a
-                  className={`font-medium transition-colors ${
+                <span
+                  className={`font-medium transition-colors cursor-pointer ${
                     isActiveLink(link.href)
                       ? "text-primary"
                       : "text-neutral-dark hover:text-primary"
                   }`}
                 >
                   {link.label}
-                </a>
+                </span>
               </Link>
             ))}
           </div>
@@ -68,8 +68,8 @@ export default function Navigation() {
                 <div className="flex flex-col space-y-4 mt-6">
                   {navLinks.map((link) => (
                     <Link key={link.href} href={link.href}>
-                      <a
-                        className={`font-medium text-lg transition-colors ${
+                      <span
+                        className={`font-medium text-lg transition-colors cursor-pointer ${
                           isActiveLink(link.href)
                             ? "text-primary"
                             : "text-neutral-dark hover:text-primary"
@@ -77,7 +77,7 @@ export default function Navigation() {
                         onClick={() => setIsOpen(false)}
                       >
                         {link.label}
-                      </a>
+                      </span>
                     </Link>
                   ))}
                   <Link href="/contact">

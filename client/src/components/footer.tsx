@@ -33,11 +33,11 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-6">Products</h3>
             <ul className="space-y-3 text-sm text-gray-300">
-              <li><Link href="/products"><a className="hover:text-white transition-colors">Street Lighting</a></Link></li>
-              <li><Link href="/products"><a className="hover:text-white transition-colors">Home Lighting</a></Link></li>
-              <li><Link href="/products"><a className="hover:text-white transition-colors">Garden Lighting</a></Link></li>
-              <li><Link href="/products"><a className="hover:text-white transition-colors">Solar Systems</a></Link></li>
-              <li><Link href="/products"><a className="hover:text-white transition-colors">Power Solutions</a></Link></li>
+              <li><Link href="/products"><span className="hover:text-white transition-colors cursor-pointer">Street Lighting</span></Link></li>
+              <li><Link href="/products"><span className="hover:text-white transition-colors cursor-pointer">Home Lighting</span></Link></li>
+              <li><Link href="/products"><span className="hover:text-white transition-colors cursor-pointer">Garden Lighting</span></Link></li>
+              <li><Link href="/products"><span className="hover:text-white transition-colors cursor-pointer">Solar Systems</span></Link></li>
+              <li><Link href="/products"><span className="hover:text-white transition-colors cursor-pointer">Power Solutions</span></Link></li>
             </ul>
           </div>
 
@@ -55,11 +55,11 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-6">Company</h3>
             <ul className="space-y-3 text-sm text-gray-300">
-              <li><Link href="/about"><a className="hover:text-white transition-colors">About Us</a></Link></li>
+              <li><Link href="/about"><span className="hover:text-white transition-colors cursor-pointer">About Us</span></Link></li>
               <li><a href="#" className="hover:text-white transition-colors">Our Team</a></li>
               <li><a href="#" className="hover:text-white transition-colors">Careers</a></li>
               <li><a href="#" className="hover:text-white transition-colors">News & Updates</a></li>
-              <li><Link href="/contact"><a className="hover:text-white transition-colors">Contact</a></Link></li>
+              <li><Link href="/contact"><span className="hover:text-white transition-colors cursor-pointer">Contact</span></Link></li>
             </ul>
           </div>
         </div>
