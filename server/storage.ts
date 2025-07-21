@@ -38,7 +38,7 @@ export class MemStorage implements IStorage {
           "Lifespan": "50,000 hours",
           "Warranty": "5 years"
         },
-        imageUrl: "https://images.unsplash.com/photo-1573804633927-bfcbcd909acd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=600",
+        imageUrl: "https://images.unsplash.com/photo-1573804633927-bfcbcd909acd?w=800&h=600&fit=crop&auto=format",
         iconClass: "fas fa-road",
         tags: ["LED Technology", "Energy Efficient", "Smart Control"],
         isFeatured: 1
@@ -57,7 +57,7 @@ export class MemStorage implements IStorage {
           "Insulation": "PUF Foam",
           "Warranty": "5 years"
         },
-        imageUrl: "https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=250",
+        imageUrl: "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800&h=600&fit=crop&auto=format",
         iconClass: "fas fa-sun",
         tags: ["Eco-Friendly", "Cost Effective", "Solar Powered"],
         isFeatured: 1
@@ -76,7 +76,7 @@ export class MemStorage implements IStorage {
           "Lifespan": "25,000 hours",
           "Warranty": "3 years"
         },
-        imageUrl: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=250",
+        imageUrl: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&h=600&fit=crop&auto=format",
         iconClass: "fas fa-home",
         tags: ["Smart Control", "Energy Saving", "Modern Design"],
         isFeatured: 1
@@ -95,7 +95,7 @@ export class MemStorage implements IStorage {
           "Installation": "Ground/Wall Mount",
           "Warranty": "2 years"
         },
-        imageUrl: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
+        imageUrl: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop&auto=format",
         iconClass: "fas fa-seedling",
         tags: ["Weather Resistant", "Decorative", "Low Voltage"],
         isFeatured: 0
@@ -114,7 +114,7 @@ export class MemStorage implements IStorage {
           "Efficiency": "92%+",
           "Warranty": "3 years"
         },
-        imageUrl: "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=600",
+        imageUrl: "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=800&h=600&fit=crop&auto=format",
         iconClass: "fas fa-gas-pump",
         tags: ["Backup Power", "High Reliability", "Automatic"],
         isFeatured: 0
@@ -133,7 +133,7 @@ export class MemStorage implements IStorage {
           "Efficiency": "95%+",
           "Warranty": "5 years"
         },
-        imageUrl: "https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=600",
+        imageUrl: "https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?w=800&h=600&fit=crop&auto=format",
         iconClass: "fas fa-battery-three-quarters",
         tags: ["Energy Storage", "IoT Enabled", "Scalable"],
         isFeatured: 0
@@ -152,7 +152,7 @@ export class MemStorage implements IStorage {
           "Runtime": "8-12 hours",
           "Warranty": "2 years"
         },
-        imageUrl: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=300",
+        imageUrl: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=800&h=600&fit=crop&auto=format",
         iconClass: "fas fa-sun",
         tags: ["Portable Solar", "Emergency Light", "USB Charging"],
         isFeatured: 0
@@ -171,7 +171,7 @@ export class MemStorage implements IStorage {
           "Safety": "Child Safe Materials",
           "Warranty": "1 year"
         },
-        imageUrl: "https://images.unsplash.com/photo-1532601224476-15c79f2f7a51?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=600",
+        imageUrl: "https://images.unsplash.com/photo-1532601224476-15c79f2f7a51?w=800&h=600&fit=crop&auto=format",
         iconClass: "fas fa-flask",
         tags: ["Educational", "Hydrogen Power", "Safe Design"],
         isFeatured: 0
@@ -190,7 +190,7 @@ export class MemStorage implements IStorage {
           "Lifespan": "30,000 hours",
           "Warranty": "3 years"
         },
-        imageUrl: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
+        imageUrl: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=800&h=600&fit=crop&auto=format",
         iconClass: "fas fa-bed",
         tags: ["Institutional", "Energy Efficient", "Centralized"],
         isFeatured: 0
@@ -209,7 +209,7 @@ export class MemStorage implements IStorage {
           "Efficiency": "98%+",
           "Warranty": "2 years"
         },
-        imageUrl: "https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=250",
+        imageUrl: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=600&fit=crop&auto=format",
         iconClass: "fas fa-charging-station",
         tags: ["PWM Technology", "Battery Protection", "Solar Controller"],
         isFeatured: 0
@@ -228,7 +228,7 @@ export class MemStorage implements IStorage {
           "Monitoring": "Real-time Data",
           "Warranty": "5 years"
         },
-        imageUrl: "https://images.unsplash.com/photo-1514317625640-6b1bf7c5b0b0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=600",
+        imageUrl: "https://images.unsplash.com/photo-1514317625640-6b1bf7c5b0b0?w=800&h=600&fit=crop&auto=format",
         iconClass: "fas fa-road",
         tags: ["Automatic Control", "Smart Sensors", "Remote Monitoring"],
         isFeatured: 0

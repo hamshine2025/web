@@ -31,7 +31,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold mb-6">Products</h3>
+            <h3 className="text-lg font-semibold mb-6 text-white">Products</h3>
             <ul className="space-y-3 text-sm text-gray-300">
               <li><Link href="/products"><span className="hover:text-white transition-colors cursor-pointer">Street Lighting</span></Link></li>
               <li><Link href="/products"><span className="hover:text-white transition-colors cursor-pointer">Home Lighting</span></Link></li>
@@ -42,7 +42,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold mb-6">Services</h3>
+            <h3 className="text-lg font-semibold mb-6 text-white">Services</h3>
             <ul className="space-y-3 text-sm text-gray-300">
               <li><a href="#" className="hover:text-white transition-colors">Installation</a></li>
               <li><a href="#" className="hover:text-white transition-colors">Maintenance</a></li>
@@ -53,7 +53,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold mb-6">Company</h3>
+            <h3 className="text-lg font-semibold mb-6 text-white">Company</h3>
             <ul className="space-y-3 text-sm text-gray-300">
               <li><Link href="/about"><span className="hover:text-white transition-colors cursor-pointer">About Us</span></Link></li>
               <li><a href="#" className="hover:text-white transition-colors">Our Team</a></li>
