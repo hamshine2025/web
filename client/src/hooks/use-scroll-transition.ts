@@ -19,10 +19,9 @@ export const useScrollTransition = () => {
 
   // Calculate time of day based on scroll progress
   const getTimeOfDay = () => {
-    if (scrollProgress < 0.2) return 'sunrise';
-    if (scrollProgress < 0.4) return 'morning';
-    if (scrollProgress < 0.6) return 'afternoon';
-    if (scrollProgress < 0.8) return 'sunset';
+    if (scrollProgress < 0.3) return 'sunrise';
+    if (scrollProgress < 0.6) return 'morning';
+    if (scrollProgress < 0.8) return 'afternoon';
     return 'night';
   };
 
@@ -30,36 +29,30 @@ export const useScrollTransition = () => {
   const getBackgroundGradient = () => {
     const progress = scrollProgress;
     
-    if (progress < 0.2) {
-      // Sunrise: Pink/orange to light blue
-      const intensity = progress / 0.2;
+    if (progress < 0.3) {
+      // Sunrise: Soft pink/orange to light blue
+      const intensity = progress / 0.3;
       return `linear-gradient(180deg, 
-        hsl(${15 + intensity * 45}, ${80 - intensity * 30}%, ${85 - intensity * 15}%) 0%,
-        hsl(${195 + intensity * 15}, ${60 + intensity * 20}%, ${90 - intensity * 10}%) 100%)`;
-    } else if (progress < 0.4) {
-      // Morning: Light blue to bright blue
-      const intensity = (progress - 0.2) / 0.2;
-      return `linear-gradient(180deg,
-        hsl(${210 - intensity * 10}, ${80 + intensity * 10}%, ${80 - intensity * 20}%) 0%,
-        hsl(${200 + intensity * 10}, ${70 + intensity * 20}%, ${85 - intensity * 25}%) 100%)`;
+        hsl(${15 + intensity * 30}, ${70 - intensity * 20}%, ${90 - intensity * 10}%) 0%,
+        hsl(${200 + intensity * 10}, ${60 + intensity * 15}%, ${95 - intensity * 5}%) 100%)`;
     } else if (progress < 0.6) {
-      // Afternoon: Bright to warm
-      const intensity = (progress - 0.4) / 0.2;
+      // Morning: Light blue to bright daylight
+      const intensity = (progress - 0.3) / 0.3;
       return `linear-gradient(180deg,
-        hsl(${200 + intensity * 20}, ${90 - intensity * 20}%, ${60 + intensity * 20}%) 0%,
-        hsl(${180 + intensity * 30}, ${80 - intensity * 10}%, ${75 - intensity * 15}%) 100%)`;
+        hsl(${210 - intensity * 5}, ${75 + intensity * 15}%, ${85 - intensity * 15}%) 0%,
+        hsl(${205 + intensity * 5}, ${80 + intensity * 10}%, ${90 - intensity * 20}%) 100%)`;
     } else if (progress < 0.8) {
-      // Sunset: Warm to orange/red
+      // Afternoon: Bright blue to deeper blue
       const intensity = (progress - 0.6) / 0.2;
       return `linear-gradient(180deg,
-        hsl(${30 - intensity * 15}, ${85 + intensity * 10}%, ${70 - intensity * 30}%) 0%,
-        hsl(${15 + intensity * 15}, ${90 - intensity * 20}%, ${50 + intensity * 20}%) 100%)`;
+        hsl(${210 + intensity * 10}, ${90 - intensity * 15}%, ${70 - intensity * 20}%) 0%,
+        hsl(${220 + intensity * 15}, ${85 - intensity * 20}%, ${65 - intensity * 25}%) 100%)`;
     } else {
-      // Night: Dark blue to black
+      // Night: Deep blue to black
       const intensity = (progress - 0.8) / 0.2;
       return `linear-gradient(180deg,
-        hsl(${220 + intensity * 20}, ${30 - intensity * 20}%, ${15 - intensity * 10}%) 0%,
-        hsl(${240 - intensity * 40}, ${20 - intensity * 15}%, ${8 - intensity * 6}%) 100%)`;
+        hsl(${230 + intensity * 10}, ${40 - intensity * 25}%, ${20 - intensity * 15}%) 0%,
+        hsl(${240 - intensity * 20}, ${25 - intensity * 20}%, ${8 - intensity * 6}%) 100%)`;
     }
   };
 
