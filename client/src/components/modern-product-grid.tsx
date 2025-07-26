@@ -73,7 +73,7 @@ export default function ModernProductGrid({ products, isLoading }: ModernProduct
               </div>
               
               <Link href={`/products/${product.id}`}>
-                <Button className="w-full bg-primary hover:bg-primary/90 text-white flex items-center justify-center space-x-2 mt-4">
+                <Button className="w-full flex items-center justify-center space-x-2 mt-4">
                   <span>Learn More</span>
                   <ArrowRight className="w-4 h-4" />
                 </Button>

@@ -48,7 +48,7 @@ export default function Header() {
               </Button>
             </Link>
             <Link href="/contact">
-              <Button variant="outline" className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-primary transition-all duration-300 text-lg">
+              <Button className="border-2 border-white bg-transparent text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-primary transition-all duration-300 text-lg">
                 Get Consultation
               </Button>
             </Link>

@@ -13,20 +13,20 @@
   --card-foreground: hsl(224, 71.4%, 4.1%);
   --border: hsl(220, 13%, 91%);
   --input: hsl(220, 13%, 91%);
-  --primary: hsl(145, 100%, 23%);
+  --primary: hsl(145, 85%, 28%);
   --primary-foreground: hsl(0, 0%, 100%);
-  --secondary: hsl(145, 10%, 95%);
-  --secondary-foreground: hsl(145, 100%, 11%);
-  --accent: hsl(145, 10%, 95%);
-  --accent-foreground: hsl(145, 100%, 11%);
+  --secondary: hsl(145, 15%, 92%);
+  --secondary-foreground: hsl(145, 85%, 15%);
+  --accent: hsl(145, 15%, 92%);
+  --accent-foreground: hsl(145, 85%, 15%);
   --destructive: hsl(0, 84.2%, 60.2%);
   --destructive-foreground: hsl(60, 9.1%, 97.8%);
-  --ring: hsl(145, 100%, 23%);
+  --ring: hsl(145, 85%, 28%);
   --radius: 0.5rem;
-  --primary-light: hsl(145, 80%, 35%);
-  --accent-green: hsl(145, 100%, 23%);
-  --neutral-dark: hsl(145, 15%, 20%);
-  --neutral-medium: hsl(145, 10%, 30%);
+  --primary-light: hsl(145, 70%, 40%);
+  --accent-green: hsl(145, 85%, 28%);
+  --neutral-dark: hsl(215, 25%, 15%);
+  --neutral-medium: hsl(215, 15%, 25%);
 }
 
 .dark {
@@ -40,15 +40,15 @@
   --card-foreground: hsl(210, 20%, 98%);
   --border: hsl(215, 27.9%, 16.9%);
   --input: hsl(215, 27.9%, 16.9%);
-  --primary: hsl(145, 80%, 35%);
+  --primary: hsl(145, 70%, 40%);
   --primary-foreground: hsl(0, 0%, 100%);
-  --secondary: hsl(145, 15%, 15%);
+  --secondary: hsl(145, 20%, 18%);
   --secondary-foreground: hsl(0, 0%, 98%);
-  --accent: hsl(145, 15%, 15%);
+  --accent: hsl(145, 20%, 18%);
   --accent-foreground: hsl(0, 0%, 98%);
   --destructive: hsl(0, 62.8%, 30.6%);
   --destructive-foreground: hsl(210, 20%, 98%);
-  --ring: hsl(145, 80%, 35%);
+  --ring: hsl(145, 70%, 40%);
 }
 
 @layer base {

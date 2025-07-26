@@ -92,7 +92,7 @@ export default function Home() {
             
             <div className="text-center mt-12">
               <Link href="/products">
-                <Button className="bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-xl text-lg font-semibold">
+                <Button className="px-8 py-4 rounded-xl text-lg font-semibold">
                   View All Products
                 </Button>
               </Link>
@@ -117,7 +117,7 @@ export default function Home() {
                   <h3 className="text-xl font-bold text-gray-800 mb-4">Street Lighting</h3>
                   <p className="text-gray-600 mb-6">Professional LED street lighting systems for urban infrastructure</p>
                   <Link href="/products">
-                    <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white">
+                    <Button variant="outline">
                       Explore
                     </Button>
                   </Link>
@@ -132,7 +132,7 @@ export default function Home() {
                   <h3 className="text-xl font-bold text-gray-800 mb-4">Solar Solutions</h3>
                   <p className="text-gray-600 mb-6">Eco-friendly solar water heaters and energy systems</p>
                   <Link href="/products">
-                    <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white">
+                    <Button variant="outline">
                       Explore
                     </Button>
                   </Link>
@@ -147,7 +147,7 @@ export default function Home() {
                   <h3 className="text-xl font-bold text-gray-800 mb-4">Power Systems</h3>
                   <p className="text-gray-600 mb-6">Reliable power packs and energy storage solutions</p>
                   <Link href="/products">
-                    <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white">
+                    <Button variant="outline">
                       Explore
                     </Button>
                   </Link>
@@ -162,7 +162,7 @@ export default function Home() {
                   <h3 className="text-xl font-bold text-gray-800 mb-4">Smart Controls</h3>
                   <p className="text-gray-600 mb-6">Advanced automation and control systems</p>
                   <Link href="/products">
-                    <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white">
+                    <Button variant="outline">
                       Explore
                     </Button>
                   </Link>
@@ -231,7 +231,7 @@ export default function Home() {
                 </Button>
               </Link>
               <Link href="/products">
-                <Button variant="outline" className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-primary transition-all duration-300 text-lg">
+                <Button className="border-2 border-white bg-transparent text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-primary transition-all duration-300 text-lg">
                   Browse Products
                 </Button>
               </Link>
