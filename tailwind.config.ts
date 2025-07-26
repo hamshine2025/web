@@ -61,6 +61,10 @@ export default {
           border: "var(--sidebar-border)",
           ring: "var(--sidebar-ring)",
         },
+        "primary-light": "var(--primary-light)",
+        "accent-green": "var(--accent-green)",
+        "neutral-dark": "var(--neutral-dark)",
+        "neutral-medium": "var(--neutral-medium)",
       },
       keyframes: {
         "accordion-down": {

@@ -7,6 +7,7 @@ This is a modern React-based e-commerce platform for Hamshine Industries, a ligh
 ## User Preferences
 
 Preferred communication style: Simple, everyday language.
+Brand Color: #007a37 (green) - Updated color scheme from blue to green across the entire website.
 
 ## System Architecture
 
