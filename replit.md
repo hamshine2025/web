@@ -8,6 +8,7 @@ This is a modern React-based e-commerce platform for Hamshine Industries, a ligh
 
 Preferred communication style: Simple, everyday language.
 Brand Color: #007a37 (green) - Updated color scheme from blue to green across the entire website.
+UI Design: Day-to-night transition effect - Background gradually transitions from sunrise/morning colors at the top to deep night colors at the bottom as user scrolls through the website.
 
 ## System Architecture
 
@@ -55,9 +56,10 @@ Brand Color: #007a37 (green) - Updated color scheme from blue to green across th
 
 ### UI System
 - **Design System**: shadcn/ui components built on Radix UI
-- **Theme**: Custom color palette with CSS variables
+- **Theme**: Custom color palette with CSS variables, dynamic day-to-night gradient background
 - **Typography**: Tailwind CSS typography utilities
 - **Icons**: Lucide React icons + FontAwesome class references
+- **Scroll Effects**: Custom hook for day-to-night transition with celestial elements (sun, moon, stars)
 - **Responsive**: Mobile-first responsive design
 
 ## Data Flow

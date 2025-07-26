@@ -7,9 +7,12 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "wouter";
 import { CheckCircle, Award, Leaf, Settings, MapPin, Phone, Mail, Clock } from "lucide-react";
+import { useScrollTransition } from "@/hooks/use-scroll-transition";
 import type { Product } from "@shared/schema";
 
 export default function Home() {
+  const { scrollProgress, backgroundGradient, textColor, overlayOpacity, celestialElements } = useScrollTransition();
+  
   const { data: featuredProducts, isLoading: featuredLoading } = useQuery<Product[]>({
     queryKey: ["/api/products/featured"],
   });
@@ -30,12 +33,51 @@ export default function Home() {
   ];
 
   return (
-    <div className="min-h-screen bg-slate-50">
-      <Navigation />
-      <HeroSection />
+    <div 
+      className="min-h-screen transition-all duration-1000 ease-in-out"
+      style={{ 
+        background: backgroundGradient,
+        minHeight: '100vh'
+      }}
+    >
+      {/* Overlay for content readability during dark sections */}
+      <div 
+        className="fixed inset-0 bg-black transition-opacity duration-1000 pointer-events-none z-10"
+        style={{ opacity: overlayOpacity }}
+      />
+      
+      {/* Celestial Elements */}
+      {celestialElements.map((element, index) => (
+        <div
+          key={`${element.type}-${index}`}
+          className="fixed pointer-events-none z-5 transition-opacity duration-1000"
+          style={{
+            ...element.position,
+            opacity: element.opacity
+          }}
+        >
+          {element.type === 'sun' && (
+            <div className="w-16 h-16 bg-yellow-400 rounded-full shadow-lg animate-pulse">
+              <div className="w-full h-full bg-gradient-to-br from-yellow-300 to-orange-400 rounded-full"></div>
+            </div>
+          )}
+          {element.type === 'moon' && (
+            <div className="w-12 h-12 bg-gray-100 rounded-full shadow-lg">
+              <div className="w-full h-full bg-gradient-to-br from-gray-100 to-gray-300 rounded-full"></div>
+            </div>
+          )}
+          {element.type === 'star' && (
+            <div className="w-2 h-2 bg-white rounded-full animate-pulse shadow-sm"></div>
+          )}
+        </div>
+      ))}
+      
+      <div className="relative z-20">
+        <Navigation />
+        <HeroSection />
 
       {/* Product Categories Section */}
-      <section id="products" className="py-20 bg-white">
+      <section id="products" className="py-20 bg-white/80 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-neutral-dark mb-4">Our Product Portfolio</h2>
@@ -67,7 +109,7 @@ export default function Home() {
           )}
 
           {/* Complete Product List */}
-          <div className="bg-gradient-to-r from-slate-100 to-slate-50 rounded-2xl p-8">
+          <div className="bg-gradient-to-r from-slate-100/60 to-slate-50/60 backdrop-blur-sm rounded-2xl p-8">
             <h3 className="text-2xl font-bold text-neutral-dark mb-8 text-center">Complete Product Range</h3>
             {allLoading ? (
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
@@ -107,7 +149,7 @@ export default function Home() {
       </section>
 
       {/* Technical Excellence Section */}
-      <section className="py-20 bg-slate-100">
+      <section className="py-20 bg-slate-100/60 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-8">
@@ -189,7 +231,7 @@ export default function Home() {
       </section>
 
       {/* Quick Contact Section */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-white/70 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-neutral-dark mb-4">Ready to Get Started?</h2>
@@ -213,7 +255,8 @@ export default function Home() {
         </div>
       </section>
 
-      <Footer />
+        <Footer />
+      </div>
     </div>
   );
 }
