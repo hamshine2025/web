@@ -8,9 +8,10 @@ export const companyInfo = {
   description: "Leading manufacturer of professional lighting systems, solar solutions, and power management equipment for residential, commercial, and industrial applications.",
   
   contact: {
-    address: "123 Industrial Park, Tech City, TC 12345",
-    phone: "+1 (555) 123-4567",
-    email: "info@hamshineindustries.com",
+    address: "NO 7A1 B. KATIHALLI INDUSTRIAL AREA, Hassan - Karnataka State (573201, India)",
+    phone: "7019666827",
+    email: "hamshine@gmail.com",
+    emailSecondary: "hamshine@hotmail.com",
     businessHours: "Mon - Sat: 9:00 AM - 6:00 PM"
   },
   

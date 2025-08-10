@@ -80,28 +80,75 @@ export const useScrollTransition = () => {
     const elements = [];
     
     if (progress < 0.3) {
-      // Sunrise/Morning - Sun
+      // Sunrise/Morning - Sun moving from left to right
+      const sunProgress = progress / 0.3; // 0 to 1 over the first 30% of scroll
+      const sunX = 10 + (sunProgress * 70); // Move from 10% to 80% of screen width
+      const sunY = 15 - (sunProgress * 10); // Move slightly upward as it rises
+      
       elements.push({
         type: 'sun',
-        opacity: Math.max(0, 1 - progress * 2),
-        position: { right: '10%', top: '10%' }
+        opacity: Math.max(0.3, 1 - progress * 1.5), // Fade out slightly as it moves
+        position: { 
+          left: `${sunX}%`, 
+          top: `${sunY}%`,
+          transform: 'translateX(-50%)' // Center the sun on its position
+        }
       });
-    } else if (progress > 0.8) {
+    } else if (progress < 0.6) {
+      // Mid-morning to afternoon - Sun continues moving right and up
+      const sunProgress = (progress - 0.3) / 0.3; // 0 to 1 over 30% to 60% of scroll
+      const sunX = 80 + (sunProgress * 15); // Continue from 80% to 95%
+      const sunY = 5 - (sunProgress * 3); // Continue moving up slightly
+      
+      elements.push({
+        type: 'sun',
+        opacity: 0.8 - (sunProgress * 0.3), // Continue fading
+        position: { 
+          left: `${sunX}%`, 
+          top: `${sunY}%`,
+          transform: 'translateX(-50%)'
+        }
+      });
+    } else if (progress < 0.8) {
+      // Late afternoon - Sun setting (moving down and right)
+      const sunProgress = (progress - 0.6) / 0.2; // 0 to 1 over 60% to 80% of scroll
+      const sunX = 95 + (sunProgress * 5); // Move to 100% (off screen)
+      const sunY = 2 + (sunProgress * 20); // Move down as it sets
+      
+      elements.push({
+        type: 'sun',
+        opacity: 0.5 - (sunProgress * 0.5), // Fade out as it sets
+        position: { 
+          left: `${sunX}%`, 
+          top: `${sunY}%`,
+          transform: 'translateX(-50%)'
+        }
+      });
+    } else {
       // Night - Stars and Moon
+      const nightProgress = (progress - 0.8) / 0.2; // 0 to 1 over 80% to 100% of scroll
+      
       elements.push({
         type: 'moon',
-        opacity: Math.min(1, (progress - 0.8) * 5),
-        position: { right: '15%', top: '8%' }
+        opacity: Math.min(1, nightProgress * 2),
+        position: { 
+          right: '15%', 
+          top: '8%',
+          transform: 'translateX(50%)'
+        }
       });
       
-      // Add stars
-      for (let i = 0; i < 5; i++) {
+      // Add stars with varying positions
+      for (let i = 0; i < 8; i++) {
+        const starX = 10 + (i * 12) + (Math.sin(i) * 5); // Spread stars across screen
+        const starY = 10 + (i % 3) * 8 + (Math.cos(i) * 3); // Vary vertical position
+        
         elements.push({
           type: 'star',
-          opacity: Math.min(1, (progress - 0.8) * 5),
+          opacity: Math.min(1, nightProgress * 3) * (0.5 + Math.random() * 0.5),
           position: { 
-            right: `${20 + i * 15}%`, 
-            top: `${15 + (i % 2) * 10}%` 
+            left: `${starX}%`, 
+            top: `${starY}%`
           }
         });
       }

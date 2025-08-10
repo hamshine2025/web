@@ -14,10 +14,10 @@ export default function ModernProductGrid({ products, isLoading }: ModernProduct
     return (
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {[1, 2, 3, 4, 5, 6].map((i) => (
-          <Card key={i} className="overflow-hidden animate-pulse">
+          <Card key={i} className="overflow-hidden animate-pulse h-full flex flex-col">
             <div className="h-64 bg-gray-200"></div>
-            <CardContent className="p-6">
-              <div className="space-y-4">
+            <CardContent className="p-6 flex flex-col flex-1">
+              <div className="space-y-4 flex-1">
                 <div className="h-6 bg-gray-200 rounded w-3/4"></div>
                 <div className="h-4 bg-gray-200 rounded w-full"></div>
                 <div className="h-4 bg-gray-200 rounded w-2/3"></div>
@@ -31,8 +31,8 @@ export default function ModernProductGrid({ products, isLoading }: ModernProduct
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      {products?.slice(0, 6).map((product) => (
-        <Card key={product.id} className="group overflow-hidden hover:shadow-xl transition-all duration-300 border-0 bg-white/80 backdrop-blur-sm">
+      {products?.slice(0, 3).map((product) => (
+        <Card key={product.id} className="group overflow-hidden hover:shadow-xl transition-all duration-300 border-0 bg-white/80 backdrop-blur-sm h-full flex flex-col">
           <div className="relative overflow-hidden">
             <img 
               src={product.imageUrl} 
@@ -47,13 +47,20 @@ export default function ModernProductGrid({ products, isLoading }: ModernProduct
             </div>
           </div>
           
-          <CardContent className="p-6">
-            <div className="space-y-4">
+          <CardContent className="p-6 flex flex-col flex-1">
+            <div className="space-y-4 flex flex-col flex-1">
               <h3 className="text-xl font-bold text-gray-800 group-hover:text-primary transition-colors">
                 {product.name}
               </h3>
-              <p className="text-gray-600 line-clamp-2">
-                {product.shortDescription}
+              <p className="text-gray-600 flex-1 overflow-hidden">
+                <span className="block" style={{
+                  display: '-webkit-box',
+                  WebkitLineClamp: 2,
+                  WebkitBoxOrient: 'vertical',
+                  overflow: 'hidden'
+                }}>
+                  {product.shortDescription}
+                </span>
               </p>
               
               {/* Feature Icons */}
@@ -72,8 +79,8 @@ export default function ModernProductGrid({ products, isLoading }: ModernProduct
                 </div>
               </div>
               
-              <Link href={`/products/${product.id}`}>
-                <Button className="w-full flex items-center justify-center space-x-2 mt-4">
+              <Link href={`/products/${product.id}`} className="mt-auto">
+                <Button className="w-full flex items-center justify-center space-x-2">
                   <span>Learn More</span>
                   <ArrowRight className="w-4 h-4" />
                 </Button>

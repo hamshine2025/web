@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Menu, Lightbulb } from "lucide-react";
+import { Menu } from "lucide-react";
 
 export default function Navigation() {
   const [location] = useLocation();
@@ -25,14 +25,17 @@ export default function Navigation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           <Link href="/">
-            <div className="flex items-center space-x-2 text-2xl font-bold text-primary cursor-pointer">
-              <Lightbulb className="h-8 w-8" />
-              <span>Hamshine Industries</span>
+            <div className="flex items-center cursor-pointer">
+              <img 
+                src="/logo.png" 
+                alt="Hamshine Logo" 
+                className="h-10 w-auto object-contain"
+              />
             </div>
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-8 justify-center flex-1">
             {navLinks.map((link) => (
               <Link key={link.href} href={link.href}>
                 <span
@@ -46,14 +49,6 @@ export default function Navigation() {
                 </span>
               </Link>
             ))}
-          </div>
-
-          <div className="hidden md:flex">
-            <Link href="/contact">
-              <Button className="bg-primary text-white px-6 py-2 hover:bg-primary/90">
-                Get Quote
-              </Button>
-            </Link>
           </div>
 
           {/* Mobile Navigation */}
@@ -80,14 +75,6 @@ export default function Navigation() {
                       </span>
                     </Link>
                   ))}
-                  <Link href="/contact">
-                    <Button 
-                      className="bg-primary text-white w-full mt-4"
-                      onClick={() => setIsOpen(false)}
-                    >
-                      Get Quote
-                    </Button>
-                  </Link>
                 </div>
               </SheetContent>
             </Sheet>
