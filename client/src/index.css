@@ -3,30 +3,30 @@
 @tailwind utilities;
 
 :root {
-  --background: hsl(0, 0%, 100%);
+  --background: hsl(210, 40%, 98%);
   --foreground: hsl(224, 71.4%, 4.1%);
-  --muted: hsl(220, 14.3%, 95.9%);
-  --muted-foreground: hsl(220, 8.9%, 46.1%);
+  --muted: hsl(210, 40%, 96%);
+  --muted-foreground: hsl(215, 16%, 47%);
   --popover: hsl(0, 0%, 100%);
   --popover-foreground: hsl(224, 71.4%, 4.1%);
   --card: hsl(0, 0%, 100%);
   --card-foreground: hsl(224, 71.4%, 4.1%);
-  --border: hsl(220, 13%, 91%);
-  --input: hsl(220, 13%, 91%);
-  --primary: hsl(217, 91%, 60%);
+  --border: hsl(214, 32%, 91%);
+  --input: hsl(214, 32%, 91%);
+  --primary: hsl(214, 85%, 38%);
   --primary-foreground: hsl(0, 0%, 100%);
-  --secondary: hsl(217, 15%, 92%);
-  --secondary-foreground: hsl(217, 85%, 15%);
-  --accent: hsl(217, 15%, 92%);
-  --accent-foreground: hsl(217, 85%, 15%);
+  --secondary: hsl(210, 40%, 96%);
+  --secondary-foreground: hsl(214, 85%, 15%);
+  --accent: hsl(210, 40%, 96%);
+  --accent-foreground: hsl(214, 85%, 15%);
   --destructive: hsl(0, 84.2%, 60.2%);
   --destructive-foreground: hsl(60, 9.1%, 97.8%);
-  --ring: hsl(217, 91%, 60%);
+  --ring: hsl(214, 85%, 38%);
   --radius: 0.5rem;
-  --primary-light: hsl(214, 85%, 38%);
-  --accent-green: hsl(145, 85%, 28%);
-  --neutral-dark: hsl(215, 25%, 15%);
-  --neutral-medium: hsl(215, 15%, 25%);
+  --primary-light: hsl(217, 91%, 60%);
+  --accent-blue: hsl(210, 100%, 50%);
+  --neutral-dark: hsl(214, 25%, 15%);
+  --neutral-medium: hsl(214, 15%, 25%);
 }
 
 .dark {
@@ -75,16 +75,16 @@
     color: hsl(217, 91%, 60%);
   }
   
-  .accent-green {
-    color: hsl(156, 81%, 29%);
+  .accent-blue {
+    color: hsl(210, 100%, 50%);
   }
   
   .neutral-dark {
-    color: hsl(215, 25%, 27%);
+    color: hsl(214, 25%, 27%);
   }
   
   .neutral-medium {
-    color: hsl(215, 13.8%, 34.1%);
+    color: hsl(214, 13.8%, 34.1%);
   }
 
   .bg-primary {
@@ -95,8 +95,8 @@
     background-color: hsl(217, 91%, 60%);
   }
   
-  .bg-accent-green {
-    background-color: hsl(156, 81%, 29%);
+  .bg-accent-blue {
+    background-color: hsl(210, 100%, 50%);
   }
   
   .hover\:bg-primary:hover {
@@ -111,15 +111,15 @@
     color: hsl(217, 91%, 60%);
   }
 
-  .text-accent-green {
-    color: hsl(156, 81%, 29%);
+  .text-accent-blue {
+    color: hsl(210, 100%, 50%);
   }
 
   .text-neutral-dark {
-    color: hsl(215, 25%, 27%);
+    color: hsl(214, 25%, 27%);
   }
 
   .text-neutral-medium {
-    color: hsl(215, 13.8%, 34.1%);
+    color: hsl(214, 13.8%, 34.1%);
   }
 }

@@ -8,8 +8,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="space-y-6">
             <div className="flex items-center space-x-2 text-2xl font-bold">
-              <Lightbulb className="h-8 w-8 text-yellow-400" />
-              <span>Hamshine Industries</span>
+              <img src="/header.png" alt="Hamshine Industries" className="w-60 h-30" />
             </div>
             <p className="text-gray-300 text-sm leading-relaxed">
               Leading manufacturer of professional lighting systems, solar solutions, and power management equipment for modern infrastructure needs.
@@ -24,7 +23,7 @@ export default function Footer() {
               <a href="#" className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center text-white hover:bg-primary/80 transition-colors">
                 <Linkedin className="h-4 w-4" />
               </a>
-              <a href="#" className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center text-white hover:bg-primary/80 transition-colors">
+              <a href="https://www.instagram.com/hamshine_energy" className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center text-white hover:bg-primary/80 transition-colors">
                 <Instagram className="h-4 w-4" />
               </a>
             </div>
@@ -66,7 +65,7 @@ export default function Footer() {
 
         <div className="border-t border-gray-600 mt-12 pt-8 text-center">
           <p className="text-gray-400 text-sm">
-            © 2024 Hamshine Industries. All rights reserved. | 
+            © 2025 Hamshine Industries. All rights reserved. | 
             <a href="#" className="hover:text-white transition-colors ml-1">Privacy Policy</a> | 
             <a href="#" className="hover:text-white transition-colors ml-1">Terms of Service</a>
           </p>

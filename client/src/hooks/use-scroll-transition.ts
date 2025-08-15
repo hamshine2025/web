@@ -30,13 +30,13 @@ export const useScrollTransition = () => {
     const progress = scrollProgress;
     
     if (progress < 0.3) {
-      // Sunrise: Soft pink/orange to light blue
+      // Sunrise: Soft blue to light blue
       const intensity = progress / 0.3;
       return `linear-gradient(180deg, 
-        hsl(${15 + intensity * 30}, ${70 - intensity * 20}%, ${90 - intensity * 10}%) 0%,
-        hsl(${200 + intensity * 10}, ${60 + intensity * 15}%, ${95 - intensity * 5}%) 100%)`;
+        hsl(${200 + intensity * 20}, ${60 + intensity * 20}%, ${90 - intensity * 10}%) 0%,
+        hsl(${210 + intensity * 10}, ${70 + intensity * 15}%, ${95 - intensity * 5}%) 100%)`;
     } else if (progress < 0.6) {
-      // Morning: Light blue to bright daylight
+      // Morning: Light blue to bright daylight blue
       const intensity = (progress - 0.3) / 0.3;
       return `linear-gradient(180deg,
         hsl(${210 - intensity * 5}, ${75 + intensity * 15}%, ${85 - intensity * 15}%) 0%,
@@ -60,7 +60,7 @@ export const useScrollTransition = () => {
   const getTextColor = () => {
     const progress = scrollProgress;
     if (progress < 0.7) {
-      return 'text-gray-800'; // Dark text for light backgrounds
+      return 'text-neutral-dark'; // Dark text for light backgrounds
     } else {
       return 'text-white'; // Light text for dark backgrounds
     }
