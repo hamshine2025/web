@@ -15,12 +15,12 @@ fi
 
 # Update system
 echo "📦 Updating system packages..."
-apt update && apt upgrade -y
+
 
 # Install Nginx if not already installed
 if ! command -v nginx &> /dev/null; then
     echo "📥 Installing Nginx..."
-    apt install -y nginx
+    yum install -y nginx
 else
     echo "✅ Nginx is already installed"
 fi
