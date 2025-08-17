@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Domain Setup Script for hamshineindustries.com
-# Run this on your server at 51.21.245.8
+# Run this on your server at 51.21.245.8 (Amazon Linux)
 
 set -e
 
@@ -15,7 +15,7 @@ fi
 
 # Update system
 echo "📦 Updating system packages..."
-
+yum update -y
 
 # Install Nginx if not already installed
 if ! command -v nginx &> /dev/null; then
@@ -29,19 +29,14 @@ fi
 echo "💾 Backing up existing Nginx configuration..."
 cp /etc/nginx/nginx.conf /etc/nginx/nginx.conf.backup.$(date +%Y%m%d_%H%M%S)
 
-# Copy our custom configuration
+# For Amazon Linux, we'll modify the main nginx.conf directly
 echo "📝 Installing custom Nginx configuration..."
-cp nginx.conf /etc/nginx/sites-available/hamshineindustries.com
 
-# Create symbolic link to enable the site
-echo "🔗 Enabling the site..."
-ln -sf /etc/nginx/sites-available/hamshineindustries.com /etc/nginx/sites-enabled/
+# Create a backup of the original nginx.conf
+cp /etc/nginx/nginx.conf /etc/nginx/nginx.conf.original
 
-# Remove default site if it exists
-if [ -L /etc/nginx/sites-enabled/default ]; then
-    echo "🗑️ Removing default Nginx site..."
-    rm /etc/nginx/sites-enabled/default
-fi
+# Replace the entire nginx.conf with our custom configuration
+cp nginx-http.conf /etc/nginx/nginx.conf
 
 # Test Nginx configuration
 echo "🧪 Testing Nginx configuration..."
@@ -50,9 +45,14 @@ nginx -t
 if [ $? -eq 0 ]; then
     echo "✅ Nginx configuration is valid"
     
-    # Reload Nginx
-    echo "🔄 Reloading Nginx..."
-    systemctl reload nginx
+    # Start Nginx if not running
+    if ! systemctl is-active --quiet nginx; then
+        echo "🚀 Starting Nginx..."
+        systemctl start nginx
+    else
+        echo "🔄 Reloading Nginx..."
+        systemctl reload nginx
+    fi
     
     # Enable Nginx to start on boot
     echo "🚀 Enabling Nginx to start on boot..."
@@ -74,9 +74,12 @@ if [ $? -eq 0 ]; then
     echo "   - View Nginx logs: tail -f /var/log/nginx/error.log"
     echo "   - Test Nginx config: nginx -t"
     echo "   - Reload Nginx: systemctl reload nginx"
+    echo "   - Restore original config: cp /etc/nginx/nginx.conf.original /etc/nginx/nginx.conf"
     
 else
     echo "❌ Nginx configuration test failed"
+    echo "Restoring original configuration..."
+    cp /etc/nginx/nginx.conf.original /etc/nginx/nginx.conf
     echo "Please check the configuration and try again"
     exit 1
 fi 
