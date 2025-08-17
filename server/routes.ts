@@ -4,6 +4,15 @@ import { storage } from "./storage";
 import { insertInquirySchema } from "@shared/schema";
 
 export async function registerRoutes(app: Express): Promise<Server> {
+  // Health check endpoint for Docker
+  app.get("/health", (req, res) => {
+    res.status(200).json({ 
+      status: "healthy", 
+      timestamp: new Date().toISOString(),
+      uptime: process.uptime()
+    });
+  });
+
   // Get all products
   app.get("/api/products", async (req, res) => {
     try {

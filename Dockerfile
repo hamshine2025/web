@@ -16,8 +16,8 @@ RUN npm ci
 # Copy source code
 COPY . .
 
-# Build the application
-RUN npm run build:prod
+# Build the application using the simple production build
+RUN npm run build:prod:simple
 
 # Remove dev dependencies to reduce image size
 RUN npm prune --production
